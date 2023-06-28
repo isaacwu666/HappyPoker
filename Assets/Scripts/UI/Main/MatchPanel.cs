@@ -26,18 +26,19 @@ public class MatchPanel : UIBase
         BtStart.onClick.AddListener(BtStartClick);
         BtMatch.onClick.AddListener(BtMatchClick);
         transform.localPosition = Vector3.zero;
-        
+
         BtCancel.gameObject.SetActive(false);
         TextDesc.gameObject.SetActive(false);
         BtMatch.gameObject.SetActive(false);
-        
-        Bind(UIEvent.MATCH_PANEL_ACTIVE);
-        
+
+        Bind(UIEvent.MATCH_PANEL_ACTIVE,UIEvent.START_GAME);
     }
+
     //Execute
     public override void Execute(int eventCode, object message)
     {
-        base.Execute(eventCode,message);switch (eventCode)
+        base.Execute(eventCode, message);
+        switch (eventCode)
         {
             case UIEvent.MATCH_PANEL_ACTIVE:
                 BtCancel.gameObject.SetActive((bool)message);
@@ -49,12 +50,21 @@ public class MatchPanel : UIBase
                     loadTime = 0;
                     last = 0;
                 }
+
+                break;
+            case UIEvent.START_GAME:
+                showToas(startGameTost);
+                this.gameObject.SetActive(false);
+                Dispatch(AreaCode.SCENE, SceneEvent.LOAD_SCENE, "Scenes/FightSene");
                 break;
         }
     }
 
+    private PromptMsg startGameTost = new PromptMsg("匹配成功进入房间", Color.black);
+    
     private float loadTime = 0;
-    private int last=0;
+    private int last = 0;
+
     void Update()
     {
         if (!waitMatch)
@@ -63,8 +73,8 @@ public class MatchPanel : UIBase
         }
 
         loadTime += Time.deltaTime;
-        int count =(int) (loadTime / 0.5F);
-        if (count<last)
+        int count = (int)(loadTime / 0.5F);
+        if (count < last)
         {
             return;
         }
@@ -76,30 +86,28 @@ public class MatchPanel : UIBase
             stringBuilder.Append(".");
         }
 
-        if (last>6)
+        if (last > 6)
         {
             last = 0;
             loadTime = 0;
         }
 
         TextDesc.text = stringBuilder.ToString();
-
-
-
     }
+
     private void BtCancelClick()
     {
         //发送离开队列消息
-        Dispatch(AreaCode.NET,0,cancelMathc);
+        Dispatch(AreaCode.NET, 0, cancelMathc);
     }
 
-    private SocketItem cancelMathc = new SocketItem(OpCode.MATCH,MatchCode.LEAVE_CREQ,1);
-    private SocketItem match = new SocketItem(OpCode.MATCH,MatchCode.ENTER_CREQ,1);
+    private SocketItem cancelMathc = new SocketItem(OpCode.MATCH, MatchCode.LEAVE_CREQ, 1);
+    private SocketItem match = new SocketItem(OpCode.MATCH, MatchCode.ENTER_CREQ, 1);
+
     private void BtStartClick()
     {
         //快速开始
-        Dispatch(AreaCode.NET,0,match);
-        
+        Dispatch(AreaCode.NET, 0, match);
     }
 
     private void BtMatchClick()
@@ -107,5 +115,4 @@ public class MatchPanel : UIBase
     }
 
     // Update is called once per frame
-
 }

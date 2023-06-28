@@ -26,12 +26,12 @@ public class WebSocketManager : ManagerBase
     public void Update()
     {
         //读取websocket，发送mq
-        ReadMessage();
+        // ReadMessage();
     }
 
     public override void Execute(int eventCode, object message)
     {
-        base.Execute(eventCode, message);
+       // base.Execute(eventCode, message);
         switch (eventCode)
         {
             case 0:
@@ -134,7 +134,8 @@ public class WebSocketManager : ManagerBase
     private void AddMessage(WebSocket ws, string message)
     {
         Debug.Log("收到服务端消息：" + message);
-        msgQueue.Enqueue(message);
+        // msgQueue.Enqueue(message);
+        doReadMessage(message);
     }
 
     private void ReadMessage()
@@ -145,6 +146,12 @@ public class WebSocketManager : ManagerBase
         }
 
         String msg = msgQueue.Dequeue();
+        doReadMessage(msg);
+    }
+
+    private void doReadMessage(String msg)
+    {
+        
         var i = msg.IndexOf(":");
         var opType = int.Parse(msg.Substring(0, i));
         //处理消息信息
@@ -153,12 +160,20 @@ public class WebSocketManager : ManagerBase
             case Protocol.Code.OpCode.ACCOUNT:
                 _accoutHandler.OnReceive(msg.Substring(i + 1));
                 break;
+            case Protocol.Code.OpCode.CHAT:
+                _chatHandler.OnReceive(msg.Substring(i + 1));
+                break;
             case Protocol.Code.OpCode.MATCH:
                 _matchHandler.OnReceive(msg.Substring(i + 1));
+                break;
+            case Protocol.Code.OpCode.FIGHT:
+                _fightHandler.OnReceive(msg.Substring(i + 1));
                 break;
         }
     }
 
     private AccoutHandler _accoutHandler = new AccoutHandler();
     private MatchHandler _matchHandler = new MatchHandler();
+    protected FightHandler _fightHandler = new FightHandler();
+    protected ChatHandler _chatHandler = new ChatHandler();
 }

@@ -25,5 +25,16 @@ namespace Protocol.Code
         public const int OVER_BRO = 10;//服务器广播游戏结束
 
         public const int GET_CARD_SRES = 11;//服务器给客户端卡牌的响应 
+        
+        
+        //准备
+        public const int READY_CREQ = 12;
+        public const int READY_BRO = 13;
+        
+        //客户端请求当前状态
+        public const int STATUS_CREQ = 14;
+        //服务端请求广播当前状态
+        public const int STATUS_BRO = 15;
+        public const int GET_CARD_OTHER_SRES = 16;
     }
 }

@@ -19,11 +19,7 @@ namespace Protocol.Code
         public const int LEAVE_CREQ = 2;
         //public const int LEAVE_SRES = 3;
         public const int LEAVE_BRO = 3;
-
-        //准备
-        public const int READY_CREQ = 4;
-        //public const int READY_SRES = 5;
-        public const int READY_BRO = 5;
+        
 
         //开始游戏
         //public const int START_CREQ = 6;

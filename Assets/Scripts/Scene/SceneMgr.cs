@@ -22,16 +22,28 @@ public class SceneMgr : ManagerBase
     {
         Debug.Log("消息执行");
         base.Execute(eventCode, message);
-        switch (eventCode)
+        if (eventCode == SceneEvent.LOAD_SCENE)
         {
-            case SceneEvent.LOAD_SCENE:
-                if (IndexSen != null || IndexSen != message)
-                {
-                    IndexSen = (string)message;
-                    SceneManager.LoadScene(IndexSen);
-                }
+            switch (message)
+            {
+                case "Scenes/FightSene":
+                    GameObject.Find("Canvas").SetActive(false);
+                    if (IndexSen != null || IndexSen != (string)message)
+                    {
+                        IndexSen = (string)message;
+                        SceneManager.LoadScene(IndexSen);
+                    }
 
-                break;
+                    break;
+                default:
+                    if (IndexSen != null || IndexSen != (string)message)
+                    {
+                        IndexSen = (string)message;
+                        SceneManager.LoadScene(IndexSen);
+                    }
+
+                    break;
+            }
         }
     }
 }

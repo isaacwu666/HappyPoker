@@ -40,7 +40,7 @@ public class InfoPanel : UIBase
         
     }
 
-    public  void Execute(int eventCode, object message)
+    public override void Execute(int eventCode, object message)
     {
         base.Execute(eventCode,message);
         switch (eventCode)

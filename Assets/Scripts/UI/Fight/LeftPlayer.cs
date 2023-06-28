@@ -1,19 +1,26 @@
-﻿public class MePlayer : BasePlayer
+﻿public class LeftPlayer : BasePlayer
 {
-    public void Start()
+    public new void Start()
     {
         base.Start();
-        Bind(UIEvent.ME_CHAT);
+        Bind(UIEvent.LEFT_CHAT);
     }
 
+    protected override int GetPlayerIdx()
+    {
+        return GameCache.gameRoom.leftIdx;
+    }
 
     public override void Execute(int eventCode, object message)
     {
         base.Execute(eventCode, message);
         switch (eventCode)
         {
-            case UIEvent.ME_CHAT:
+            case UIEvent.LEFT_CHAT:
                 showChat((string)message);
+                break;
+            case UIEvent.LEFT_GET_CAR:
+                //加
                 break;
         }
     }

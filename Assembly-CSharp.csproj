@@ -147,6 +147,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\X509CertificateStructure.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsClientContextImpl.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\IetfAttrSyntax.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\LeftPlayer.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP160R2Point.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\NameConstraints.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\PskTlsServer.cs" />
@@ -197,6 +198,7 @@
      <Compile Include="Assets\Scripts\UI\Main\CreatePanel.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\teletrust\TeleTrusTNamedCurves.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT131Field.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\RightPlayer.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ocsp\TBSRequest.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsAeadCipher.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\ThreefishEngine.cs" />
@@ -443,6 +445,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\Authentication\Credentials.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\pkcs\PKCS12PBEParams.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\Examples\LitJson\JsonWriter.cs" />
+     <Compile Include="Assets\Scripts\Game\GameEvent.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\Examples\SignalR\Json Encoders\JSonDotnetEncoder.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\io\DigestSink.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SocketIO\Packet.cs" />
@@ -451,6 +454,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\ocsp\OCSPResp.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\SM2KeyExchangePrivateParameters.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\cms\CMSAuthenticatedGenerator.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\LeftPokerPanel.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\WebSocket\Extensions\PerMessageCompression.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\KeyParameter.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\crmf\CertId.cs" />
@@ -586,6 +590,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\pkix\CertStatus.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsContext.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\pkix\PkixCertPathValidatorUtilities.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\MePokerPanel.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterManager.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\PolicyInformation.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\esf\CompleteRevocationRefs.cs" />
@@ -669,6 +674,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\CfbBlockCipherMac.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ntt\NTTObjectIdentifiers.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\pkcs\ContentInfo.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\MePlayer.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\encoders\BufferedDecoder.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\HKDFParameters.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\gm\SM2P256V1Field.cs" />
@@ -844,6 +850,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ocsp\SingleResponse.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RsaEngine.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\prng\drbg\HashSP800Drbg.cs" />
+     <Compile Include="Assets\Scripts\Net\Impl\FightHandler.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\x509\store\IX509Store.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT283FieldElement.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x9\X9ObjectIdentifiers.cs" />
@@ -1098,6 +1105,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x9\X9IntegerConverter.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\Decompression\GZipStream.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\AuthorityInformationAccess.cs" />
+     <Compile Include="Assets\Scripts\Net\Impl\ChatHandler.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\Examples\SocketIO\SocketIOChatSample.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\operators\DefaultSignatureResult.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsSrpIdentityManager.cs" />
@@ -1147,6 +1155,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\pkcs\RSAESOAEPparams.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\x509\store\X509StoreFactory.cs" />
      <Compile Include="Assets\Scripts\UI\Login\PlayPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\ShortcutTips.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ASN1SetParser.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP256K1Point.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\misc\NetscapeCertType.cs" />
@@ -1309,6 +1318,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\generators\DsaParametersGenerator.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\Sha1Digest.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerUTF8String.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\BasePlayer.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT113Field.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\raw\Nat256.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsNoCloseNotifyException.cs" />
@@ -1436,6 +1446,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cmp\CertOrEncCert.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cms\AuthenticatedDataParser.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\io\pem\PemObjectParser.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\Poker.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\SimpleLookupTable.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT233R1Curve.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\multiplier\NafR2LMultiplier.cs" />
@@ -1507,6 +1518,7 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\security\InvalidParameterException.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\Forms\Implementations\HTTPUrlEncodedForm.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RSABlindedEngine.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\BottomShortcut.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\IEntropySource.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP224K1Field.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\date\DateTimeUtilities.cs" />
@@ -1660,6 +1672,9 @@
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cmp\OobCertHash.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AlertLevel.cs" />
      <Compile Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\WhirlpoolDigest.cs" />
+     <Compile Include="Assets\Scripts\Model\dto\PokerDTO.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\RightPokerPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\Fight\TopPanel.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SignalR\Authentication" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
@@ -1796,6 +1811,7 @@
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\gcm" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\isismtt\ocsp" />
+     <Folder Include="Assets\Scripts\Model\dto" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\localization\differences.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\localization\configurehelper.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.profiling.core@1.0.2" />
@@ -2028,6 +2044,7 @@
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec" />
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\PlatformSupport\TcpClient\WinRT" />
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\sigi" />
+     <Folder Include="Assets\Scripts\Game" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
@@ -2064,6 +2081,7 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4\Tests" />
+     <Folder Include="Assets\Scripts\UI\Fight" />
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
      <Folder Include="Assets\Scripts\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x500" />

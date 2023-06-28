@@ -16,27 +16,39 @@ public class ShortcutTips : UIBase
        {
            for (var i = 0; i < btns.Length; i++)
            {
+               var msg = btns[i].transform.GetComponentInChildren<Text>().text;
                var unityAction = new UnityAction(() =>
                {
-                   ButtonClick(btns[i].GetComponent<Text>().text);
+                   ButtonClick(msg);
                });
                btns[i].onClick.AddListener(unityAction);
            }
        }
+       Bind(UIEvent.SHORT_CUT_TIPS_ACTIVE);
+       this.transform.localPosition=Vector3.zero;
+       this.gameObject.SetActive(false);
+       
        
     }
 
     private SocketItem SocketItem = new SocketItem(OpCode.CHAT,ChatCode.CREQ);
     private void ButtonClick(string text)
     {
+        this.gameObject.SetActive(false);
         SocketItem.Value = GameCache.gameRoom.roomId+":"+text.Trim();
         Dispatch(AreaCode.NET,0,SocketItem);
         
     }
-
-    // Update is called once per frame
-    void Update()
+ 
+    public override void Execute(int eventCode, object message)
     {
-        
+        base.Execute(eventCode, message);
+        switch (eventCode)
+        {
+            case UIEvent.SHORT_CUT_TIPS_ACTIVE:
+                setPanelActive(!this.gameObject.activeSelf);
+                
+                break;
+        }
     }
 }
